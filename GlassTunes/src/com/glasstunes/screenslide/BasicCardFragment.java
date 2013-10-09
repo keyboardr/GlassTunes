@@ -67,7 +67,9 @@ public class BasicCardFragment extends CardFragment {
 
 	protected void refreshImage(View v) {
 		if (v != null) {
-			((ImageView) v.findViewById(R.id.image)).setImageResource(mIconRes);
+			ImageView imageView = (ImageView) v.findViewById(R.id.image);
+			imageView.setVisibility(mIconRes > 0 ? View.VISIBLE : View.GONE);
+			imageView.setImageResource(mIconRes);
 		}
 	}
 

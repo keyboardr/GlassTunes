@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/cover_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_album_art" />
+
+    <ImageView
+        android:id="@+id/gradient"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/overlay_large" />
+
+    <com.glasstunes.view.SliderView
+        android:id="@+id/progress_slider"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_dark_gray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32.0px"
+        android:layout_marginLeft="@dimen/generic_card_padding"
+        android:layout_marginRight="@dimen/generic_card_padding" >
+
+        <TextView
+            android:id="@+id/artist_name"
+            style="@style/SmallOverlayText"
+            android:layout_width="@dimen/artist_width"
+            android:layout_height="40.0px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:includeFontPadding="false"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/duration_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0px"
+            android:layout_above="@+id/progress_slider"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="bottom"
+            android:visibility="gone"
+            tools:ignore="NotSibling" >
+
+            <TextView
+                android:id="@+id/song_time"
+                style="@style/SmallOverlayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false" />
+
+            <TextView
+                style="@style/SmallOverlayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/duration_padding"
+                android:paddingRight="@dimen/duration_padding"
+                android:text="@string/slash" />
+
+            <TextView
+                android:id="@+id/song_duration"
+                style="@style/SmallOverlayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/artist_name"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0px" >
+
+                <ImageView
+                    android:id="@+id/play_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_musicplayer_play" />
+
+                <ProgressBar
+                    android:id="@+id/play_buffer_indicator"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/song_title"
+                style="@style/OverlayText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textSize="@dimen/music_large_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

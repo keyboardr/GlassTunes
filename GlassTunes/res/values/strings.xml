@@ -10,5 +10,6 @@
     <string name="av_play">Play</string>
     <string name="av_browse">Browse</string>
     <string name="no_results">No results</string>
+    <string name="slash">/</string>
 
 </resources>

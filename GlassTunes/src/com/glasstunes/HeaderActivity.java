@@ -32,6 +32,7 @@ public class HeaderActivity extends BaseContentCardActivity {
 		return 1;
 	}
 
+	@Override
 	protected int getLimitCards() {
 		return 5;
 	}

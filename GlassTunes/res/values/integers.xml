@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="slider_in_out_animation_duration_ms">300</integer>
+</resources>

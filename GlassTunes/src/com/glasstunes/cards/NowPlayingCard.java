@@ -13,6 +13,7 @@ import com.glasstunes.ControlsActivity;
 import com.glasstunes.GlassTunesApp;
 import com.glasstunes.R;
 import com.glasstunes.screenslide.CardFragment;
+import com.glasstunes.view.SliderView;
 import com.woodblockwithoutco.remotemetadataprovider.media.RemoteMetadataProvider;
 import com.woodblockwithoutco.remotemetadataprovider.media.enums.PlayState;
 import com.woodblockwithoutco.remotemetadataprovider.media.listeners.OnArtworkChangeListener;
@@ -41,7 +42,7 @@ public class NowPlayingCard extends CardFragment implements
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View v = inflater.inflate(R.layout.frag_content_card, container, false);
+		View v = inflater.inflate(R.layout.musicplayer, container, false);
 		return v;
 	}
 
@@ -68,22 +69,50 @@ public class NowPlayingCard extends CardFragment implements
 
 	@Override
 	public void onArtworkChanged(Bitmap arg0) {
-		((ImageView) getView().findViewById(R.id.image)).setImageBitmap(arg0);
+		((ImageView) getView().findViewById(R.id.cover_image))
+				.setImageBitmap(arg0);
 	}
 
 	@Override
 	public void onMetadataChanged(String artist, String title, String album,
 			String albumArtist, long duration) {
-		((TextView) getView().findViewById(R.id.name)).setText(title);
-		((TextView) getView().findViewById(R.id.description)).setText(artist);
+		((TextView) getView().findViewById(R.id.song_title)).setText(title);
+		((TextView) getView().findViewById(R.id.artist_name)).setText(artist);
 	}
 
 	@Override
 	public void onPlaybackStateChanged(PlayState playbackState) {
-		getView().findViewById(R.id.progress)
-				.setVisibility(
-						playbackState == PlayState.BUFFERING ? View.VISIBLE
-								: View.GONE);
+		ImageView playStatus = (ImageView) getView().findViewById(
+				R.id.play_status);
+		SliderView progress = (SliderView) getView().findViewById(
+				R.id.progress_slider);
+		if (playbackState == PlayState.BUFFERING) {
+			progress.startIndeterminate();
+		} else {
+			progress.stopIndeterminate();
+		}
+		switch (playbackState) {
+		case PAUSED:
+			playStatus.setImageResource(R.drawable.ic_musicplayer_pause);
+			playStatus.setVisibility(View.VISIBLE);
+			break;
+		case PLAYING:
+			playStatus.setImageResource(R.drawable.ic_musicplayer_play);
+			playStatus.setVisibility(View.VISIBLE);
+			break;
+		case SKIPPING_BACKWARDS:
+			playStatus.setImageResource(R.drawable.ic_musicplayer_previous);
+			playStatus.setVisibility(View.VISIBLE);
+			break;
+		case SKIPPING_FORWARDS:
+			playStatus.setImageResource(R.drawable.ic_musicplayer_next);
+			playStatus.setVisibility(View.VISIBLE);
+			break;
+		default:
+			playStatus.setVisibility(View.INVISIBLE);
+			break;
+
+		}
 	}
 
 }

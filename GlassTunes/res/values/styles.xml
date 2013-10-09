@@ -12,7 +12,7 @@
         <item name="android:textAppearanceMedium">@style/TextAppearance.Glass.Medium</item>
         <item name="android:textAppearanceSmall">@style/TextAppearance.Glass.Small</item>
     </style>
-    
+
     <style name="GlassTheme.SemiTransparent">
         <item name="android:windowBackground">@color/semitransparent_black</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
@@ -21,17 +21,27 @@
     </style>
 
     <style name="TextAppearance.Glass.Large" parent="@android:style/TextAppearance.Holo.Large">
-        <item name="android:textSize">48sp</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
     </style>
-    
+
     <style name="TextAppearance.Glass.Medium" parent="@android:style/TextAppearance.Holo.Medium">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
     </style>
-    
+
     <style name="TextAppearance.Glass.Small" parent="@android:style/TextAppearance.Holo.Small">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
     </style>
-    
-    
+
+    <style name="OverlayText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+
+    <style name="SmallOverlayText" parent="@style/OverlayText">
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
 
 </resources>
