@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GlassTunes</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="av_previous">Previous</string>
+    <string name="av_next">Next</string>
+    <string name="av_pause">Pause</string>
+    <string name="av_play">Play</string>
+    <string name="av_browse">Browse</string>
+    <string name="no_results">No results</string>
+
+</resources>

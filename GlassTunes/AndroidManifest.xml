@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.glasstunes"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="com.google.android.xdi.permission.ACCESS_APP_BROWSE_DATA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/GlassTheme" android:name="GlassTunesApp">
+        <activity
+            android:name="com.glasstunes.ControlsActivity"
+            android:theme="@style/GlassTheme.SemiTransparent" >
+        </activity>
+        <activity android:name="com.glasstunes.BrowseActivity" >
+            <intent-filter>
+                <action android:name="com.google.android.xdi.action.BROWSE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.glasstunes.DetailActivity"
+            android:theme="@style/GlassTheme.SemiTransparent" >
+            <intent-filter>
+                <action android:name="com.google.android.xdi.action.DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.glasstunes.LauncherActivity" >
+        </activity>
+        <activity android:name="com.glasstunes.HeaderActivity" >
+        </activity>
+        <activity android:name="ConfirmationActivity" >
+        </activity>
+        <activity android:name="NowPlayingActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

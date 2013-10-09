@@ -1,0 +1,41 @@
+<ViewAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.glasstunes"
+    android:id="@+id/switcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.glasstunes.screenslide.BounceBackViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.glasstunes.screenslide.BounceBackViewPager>
+
+        <com.viewpagerindicator.UnderlinePageIndicator
+            android:id="@+id/vpi"
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:layout_gravity="bottom"
+            app:fades="true"
+            app:selectedColor="@android:color/white" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_results"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</ViewAnimator>

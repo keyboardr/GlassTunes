@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pulled form the Phone app on Glass -->
+    <style name="GlassTheme" parent="android:Theme.Holo">
+        <item name="android:screenOrientation">landscape</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/black</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearance.Glass.Large</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.Glass.Medium</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Glass.Small</item>
+    </style>
+    
+    <style name="GlassTheme.SemiTransparent">
+        <item name="android:windowBackground">@color/semitransparent_black</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="TextAppearance.Glass.Large" parent="@android:style/TextAppearance.Holo.Large">
+        <item name="android:textSize">48sp</item>
+    </style>
+    
+    <style name="TextAppearance.Glass.Medium" parent="@android:style/TextAppearance.Holo.Medium">
+        <item name="android:textSize">32sp</item>
+    </style>
+    
+    <style name="TextAppearance.Glass.Small" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textSize">24sp</item>
+    </style>
+    
+    
+
+</resources>
