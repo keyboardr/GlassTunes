@@ -12,7 +12,7 @@ public class HeaderCard extends BasicCardFragment {
 	public static HeaderCard newInstance() {
 		HeaderCard frag = new HeaderCard();
 		Bundle args = BasicCardFragment.generateArgs(
-				R.drawable.ic_collections_collection, R.string.av_browse);
+				R.drawable.ic_musicplayer_radio, R.string.av_browse);
 		frag.setArguments(args);
 		return frag;
 	}

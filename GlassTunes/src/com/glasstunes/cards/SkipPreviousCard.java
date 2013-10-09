@@ -10,8 +10,8 @@ import com.glasstunes.screenslide.BasicCardFragment;
 public class SkipPreviousCard extends BasicCardFragment {
 	public static SkipPreviousCard newInstance() {
 		SkipPreviousCard frag = new SkipPreviousCard();
-		Bundle args = BasicCardFragment.generateArgs(R.drawable.ic_av_previous,
-				R.string.av_previous);
+		Bundle args = BasicCardFragment.generateArgs(
+				R.drawable.ic_musicplayer_previous, R.string.av_previous);
 		frag.setArguments(args);
 		return frag;
 	}

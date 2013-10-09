@@ -12,7 +12,7 @@ public class LauncherCard extends BasicCardFragment {
 	public static LauncherCard newInstance() {
 		LauncherCard frag = new LauncherCard();
 		Bundle args = BasicCardFragment.generateArgs(
-				R.drawable.ic_collections_collection, R.string.av_browse);
+				R.drawable.ic_musicplayer_radio, R.string.av_browse);
 		frag.setArguments(args);
 		return frag;
 	}

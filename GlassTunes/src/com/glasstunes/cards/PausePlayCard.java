@@ -15,8 +15,8 @@ public class PausePlayCard extends BasicCardFragment implements
 		OnPlaybackStateChangeListener {
 	public static PausePlayCard newInstance() {
 		PausePlayCard frag = new PausePlayCard();
-		Bundle args = BasicCardFragment.generateArgs(R.drawable.ic_av_play,
-				R.string.av_play);
+		Bundle args = BasicCardFragment.generateArgs(
+				R.drawable.ic_musicplayer_play, R.string.av_play);
 		frag.setArguments(args);
 		return frag;
 	}
@@ -86,7 +86,8 @@ public class PausePlayCard extends BasicCardFragment implements
 	}
 
 	private void updateState(View view) {
-		setIconRes(isPlaying ? R.drawable.ic_av_pause : R.drawable.ic_av_play);
+		setIconRes(isPlaying ? R.drawable.ic_musicplayer_pause
+				: R.drawable.ic_musicplayer_play);
 		setLabelRes(isPlaying ? R.string.av_pause : R.string.av_play);
 	}
 }

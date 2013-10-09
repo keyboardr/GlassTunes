@@ -11,8 +11,8 @@ public class SkipNextCard extends BasicCardFragment {
 
 	public static SkipNextCard newInstance() {
 		SkipNextCard frag = new SkipNextCard();
-		Bundle args = BasicCardFragment.generateArgs(R.drawable.ic_av_next,
-				R.string.av_next);
+		Bundle args = BasicCardFragment.generateArgs(
+				R.drawable.ic_musicplayer_next, R.string.av_next);
 		frag.setArguments(args);
 		return frag;
 	}

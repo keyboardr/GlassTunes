@@ -73,8 +73,8 @@ public class ContentCard extends CardFragment {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.frag_content_card, container, false);
 		Picasso.with(getActivity()).load(mImageUri)
-				.error(R.drawable.defaultart)
-				.placeholder(R.drawable.defaultart)
+				.error(R.drawable.ic_album_art)
+				.placeholder(R.drawable.ic_album_art)
 				.into((ImageView) v.findViewById(R.id.image));
 		TextView name = (TextView) v.findViewById(R.id.name);
 		name.setText(mDisplayName);

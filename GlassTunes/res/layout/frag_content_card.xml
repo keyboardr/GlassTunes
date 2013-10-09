@@ -18,7 +18,7 @@
             android:layout_width="240px"
             android:layout_height="240px"
             android:scaleType="fitXY"
-            android:src="@drawable/defaultart" />
+            android:src="@drawable/ic_album_art" />
 
         <ProgressBar
             android:id="@+id/progress"
