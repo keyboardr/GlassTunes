@@ -10,7 +10,7 @@ public class DetailActivity extends BaseContentCardActivity {
 
 	@Override
 	protected Uri getContentUri() {
-		return Uri.withAppendedPath(getIntent().getData(), "/sections");
+		return Uri.withAppendedPath(getIntent().getData(), "/actions");
 	}
 
 	@Override
