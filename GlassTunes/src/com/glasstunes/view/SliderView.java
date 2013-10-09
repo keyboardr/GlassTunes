@@ -1,5 +1,6 @@
 package com.glasstunes.view;
 
+import junit.framework.Assert;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
@@ -323,4 +324,30 @@ public class SliderView extends FrameLayout {
 		}
 		hideSlider(true);
 	}
+
+//	private final BaseHorizontalScrollView.PositionListener positionListener = new BaseHorizontalScrollView.PositionListener() {
+//		public void onFocused(int paramAnonymousInt) {
+//		}
+//
+//		public void onScaleChanged(float paramAnonymousFloat) {
+//			SliderView.this.setScale(paramAnonymousFloat);
+//		}
+//
+//		public void onScrollPositionChanged(float paramAnonymousFloat) {
+//			SliderView.this.setProportionalIndex(paramAnonymousFloat);
+//		}
+//
+//		public void onSettled(int paramAnonymousInt) {
+//		}
+//
+//		public void onUnsettled(int paramAnonymousInt) {
+//		}
+//	};
+//
+//	public void setScrollView(
+//			BaseHorizontalScrollView<?, ?> paramBaseHorizontalScrollView) {
+//		Assert.assertNotNull(paramBaseHorizontalScrollView);
+//		paramBaseHorizontalScrollView
+//				.addPositionListener(this.positionListener);
+//	}
 }
