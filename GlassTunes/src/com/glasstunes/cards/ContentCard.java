@@ -75,10 +75,10 @@ public class ContentCard extends CardFragment {
 		Picasso.with(getActivity()).load(mImageUri)
 				.error(R.drawable.ic_album_art)
 				.placeholder(R.drawable.ic_album_art)
-				.into((ImageView) v.findViewById(R.id.image));
-		TextView name = (TextView) v.findViewById(R.id.name);
+				.into((ImageView) v.findViewById(R.id.album_art));
+		TextView name = (TextView) v.findViewById(R.id.track_name);
 		name.setText(mDisplayName);
-		TextView description = (TextView) v.findViewById(R.id.description);
+		TextView description = (TextView) v.findViewById(R.id.artist_name);
 		description.setText(mDisplayDescription);
 		if (TextUtils.isEmpty(mDisplayDescription)) {
 			name.setGravity(Gravity.CENTER_VERTICAL);

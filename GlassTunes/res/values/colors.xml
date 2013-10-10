@@ -2,5 +2,6 @@
 <resources>
     <color name="semitransparent_black">#99000000</color>
     <color name="background_dark_gray">#ff222222</color>
+    <color name="text_gray">#ffbbbbbb</color>
     
 </resources>
