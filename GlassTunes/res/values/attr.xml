@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="BounceBackViewPager">
-    <!--
+
+        <!--
     determines the maximum amount of translation along the z-axis during the overscroll. 
     Default is 150.
-    -->
-    <attr name="overscroll_translation" format="dimension" />
+        -->
+        <attr name="overscroll_translation" format="dimension" />
 
-    <!-- Duration of animation when user releases the over scroll. Default is 400 ms. -->
-    <attr name="overscroll_animation_duration" format="integer" />
-</declare-styleable>
+        <!-- Duration of animation when user releases the over scroll. Default is 400 ms. -->
+        <attr name="overscroll_animation_duration" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TypophileTextView">
+        <attr name="fontWeight" />
+    </declare-styleable>
+
+    <attr name="fontWeight">
+        <flag name="regular" value="0x00000000" />
+        <flag name="thin" value="0x00000001" />
+        <flag name="light" value="0x00000002" />
+        <flag name="medium" value="0x00000003" />
+        <flag name="bold" value="0x00000004" />
+        <flag name="black" value="0x00000005" />
+        <flag name="italic" value="0x00000010" />
+        <flag name="condensed" value="0x00000100" />
+    </attr>
+
 </resources>

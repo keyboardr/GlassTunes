@@ -32,7 +32,7 @@
         android:layout_marginLeft="@dimen/generic_card_padding"
         android:layout_marginRight="@dimen/generic_card_padding" >
 
-        <TextView
+        <com.glasstunes.view.TypophileTextView
             android:id="@+id/artist_name"
             style="@style/SmallOverlayText"
             android:layout_width="@dimen/artist_width"
@@ -55,14 +55,14 @@
             android:visibility="gone"
             tools:ignore="NotSibling" >
 
-            <TextView
+            <com.glasstunes.view.TypophileTextView
                 android:id="@+id/song_time"
                 style="@style/SmallOverlayText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:includeFontPadding="false" />
 
-            <TextView
+            <com.glasstunes.view.TypophileTextView
                 style="@style/SmallOverlayText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                 android:paddingRight="@dimen/duration_padding"
                 android:text="@string/slash" />
 
-            <TextView
+            <com.glasstunes.view.TypophileTextView
                 android:id="@+id/song_duration"
                 style="@style/SmallOverlayText"
                 android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
 
             </FrameLayout>
 
-            <TextView
+            <com.glasstunes.view.TypophileTextView
                 android:id="@+id/song_title"
                 style="@style/OverlayText"
                 android:layout_width="fill_parent"

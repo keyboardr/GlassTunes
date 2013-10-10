@@ -24,7 +24,7 @@
         android:orientation="vertical"
         android:paddingLeft="@dimen/rhs_left_padding" >
 
-        <TextView
+        <com.glasstunes.view.TypophileTextView
             android:id="@+id/track_name"
             style="@style/OverlayText"
             android:layout_width="match_parent"
@@ -32,11 +32,9 @@
             android:ellipsize="end"
             android:includeFontPadding="false"
             android:maxLines="2"
-            android:textSize="@dimen/music_large_text_size" >
+            android:textSize="@dimen/music_large_text_size" />
 
-        </TextView>
-
-        <TextView
+        <com.glasstunes.view.TypophileTextView
             android:id="@+id/artist_name"
             style="@style/OverlayGrayText"
             android:layout_width="match_parent"
@@ -44,9 +42,7 @@
             android:ellipsize="end"
             android:includeFontPadding="false"
             android:maxLines="2"
-            android:textSize="@dimen/music_large_text_size" >
-
-        </TextView>
+            android:textSize="@dimen/music_large_text_size" />
     </LinearLayout>
 
 </RelativeLayout>

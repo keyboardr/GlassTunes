@@ -38,10 +38,12 @@
         <item name="android:shadowDx">1.0</item>
         <item name="android:shadowDy">1.0</item>
         <item name="android:shadowRadius">1.0</item>
+        <item name="fontWeight">thin</item>
     </style>
 
     <style name="SmallOverlayText" parent="@style/OverlayText">
         <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="fontWeight">light</item>
     </style>
     <style name="OverlayGrayText" parent="@style/OverlayText">
         <item name="android:textColor">@color/text_gray</item>
